@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block main %}
+<form method="POST">
+	<input type="text" name="latitude" placeholder="Latitude">
+	<input type="text" name="longitude" placeholder="Longitude">
+	<button type="submit" name="s" value="search"> Search </button>
+</form>
+{{message}}
+{% endblock main %}
