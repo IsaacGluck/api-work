@@ -1,4 +1,4 @@
 api-work
 ========
 
-Fooling around with the http://www.telize.com/ api.
+This project takes someone's latitude and longitude and returns their senators, congressmen, and their most recent votes cast.
