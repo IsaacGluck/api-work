@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block main %}
+Your representative is {{representative}} and your senators are {{senators[0]}} and {{senators[1]}}.
+<br><br>
+Senator {{senators[0]}} Vote History<br>
+To contact {{senators[0]}}, click <a href={{history[0][0][5]}}>here</a><br>
+
+{% for item in history[0] %}
+	<ul>
+		<li> {{item[0]}} ({{item[1]}}) </li> <!-- Name -->
+		<li> {{senators[0]}} voted {{item[4]}} </li>
+		<li> The result of the vote was a {{item[2]}} </li> <!-- Result -->
+		<li> The source for this information is <a href={{item[3]}}>here</a> </li>
+	</ul>
+{% endfor %}<br>
+
+Senator {{senators[1]}} History<br>
+To contact {{senators[1]}}, click <a href={{history[1][0][5]}}>here</a><br>
+
+{% for item in history[1] %}
+	<ul>
+		<li> {{item[0]}} ({{item[1]}}) </li> <!-- Name -->
+		<li> {{senators[1]}} voted {{item[4]}} </li>
+		<li> The result of the vote was a {{item[2]}} </li> <!-- Result -->
+		<li> The source for this information is <a href={{item[3]}}>here</a> </li>
+	</ul>
+{% endfor %}<br>
+
+Congressman {{representative}} History<br>
+To contact {{representative}}, click <a href={{history[2][0][5]}}>here</a><br>
+
+{% for item in history[2] %}
+	<ul>
+		<li> {{item[0]}} ({{item[1]}}) </li> <!-- Name -->
+		<li> {{representative}} voted {{item[4]}} </li>
+		<li> The result of the vote was a {{item[2]}} </li> <!-- Result -->
+		<li> The source for this information is <a href={{item[3]}}>here</a> </li>
+	</ul>
+{% endfor %}<br>
+
+<a href="index">Home</a>
+{% endblock main %}

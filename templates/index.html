@@ -1,10 +1,40 @@
 {% extends "base.html" %}
 
 {% block main %}
-<form method="POST">
-	<input type="text" name="latitude" placeholder="Latitude">
-	<input type="text" name="longitude" placeholder="Longitude">
-	<button type="submit" name="s" value="search"> Search </button>
-</form>
+<br>
+
+<center>
+  <div>
+    <h1> Helluh there. Let's check on yer gubernment repersentatives! </h1>
+    <br><br><br><br>
+    <style scoped>
+	  .button-submit { font-size: 105%; background: rgb(230,207,150); color: black; }
+	  .form-submit { font-size: 125%; background: rgb(250,239,220); color: grey; padding: 0px}
+	  div { padding: 5px; }
+    </style>		  
+    <form class="form-submit pure-form" method="POST">
+
+      <fieldset>
+	<div>
+	  <label for="latitude"> Enter your latitude: </label>
+	</div>
+	<div>
+	  <input type="text" name="latitude" placeholder="Latitude">
+	</div>
+
+	<div>
+	  <label for="longitude"> Enter your longitude: </label>
+	</div>
+	<div>
+	  <input type="text" name="longitude" placeholder="Longitude">
+	</div>
+
+	<div>
+	  <button class="button-submit pure-button" type="search" name="s" value="search"> Go! </button>
+	</div>
+      </fieldset>
+    </form>
+  </div>
+</center>
 {{message}}
 {% endblock main %}
